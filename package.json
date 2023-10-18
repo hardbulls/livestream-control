@@ -1,5 +1,5 @@
 {
-  "name": "hardbulls-livestream",
+  "name": "@hardbulls/livestream-control",
   "description": "Hard Bulls Livestreaming Tool",
   "version": "0.5.1",
   "type": "module",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@hardbulls/baseball-scoreboard": "^0.0.1",
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.3",
     "@types/node": "^16.18.14",
@@ -28,6 +29,7 @@
     "typescript": "^5.0.2"
   },
   "devDependencies": {
+    "@lit/react": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
