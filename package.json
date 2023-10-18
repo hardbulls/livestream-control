@@ -1,0 +1,67 @@
+{
+  "name": "hardbulls-livestream",
+  "description": "Hard Bulls Livestreaming Tool",
+  "version": "0.5.1",
+  "type": "module",
+  "private": true,
+  "author": {
+    "name": "Arjan Frans",
+    "email": "arjan@arjanfrans.com",
+    "url": "https://arjanfrans.com"
+  },
+  "license": "UNLICENSED",
+  "homepage": "https://www.hardbulls.com",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.3",
+    "@types/node": "^16.18.14",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "eslint-plugin-react": "^7.32.2",
+    "firebase": "^10.1.0",
+    "obs-websocket-js": "^5.0.2",
+    "react": "^18.2.0",
+    "react-colorful": "^5.6.1",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier": "^2.8.4",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1",
+    "vite": "^4.4.5",
+    "vite-plugin-checker": "^0.6.1"
+  },
+  "scripts": {
+    "start": "vite --host --port 3000",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
+    "preview": "vite preview --host --port 3000",
+    "cs-format": "prettier 'src/**/*.ts' --write --no-semi --tab-width 4 --print-width=120",
+    "cs-css": "stylelint src/**/*.css --fix",
+    "cs": "npm run cs-format && npm run lint && npm run cs-css"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
