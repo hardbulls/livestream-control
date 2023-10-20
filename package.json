@@ -1,7 +1,7 @@
 {
   "name": "@hardbulls/livestream-control",
   "description": "Hard Bulls Livestreaming Tool",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "type": "module",
   "private": true,
   "author": {

@@ -43,7 +43,11 @@ export const DisplayControl = ({ handleChange, displaySettings}: Props) => {
         <Grid2 xs={3}>
           <FormControlLabel
             control={
-              <Switch checked={!displaySettings.hideBases} onChange={() => handleChange("hideBases", !displaySettings.hideBases)} />
+              <Switch
+                checked={!displaySettings.hideBases}
+                onChange={() =>
+                handleChange("hideBases", !displaySettings.hideBases)}
+              />
             }
             label="Show Bases"
           />

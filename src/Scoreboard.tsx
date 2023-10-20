@@ -33,7 +33,7 @@ export const Scoreboard = ({ state, scoreboard }: Props) => {
   return (
     <BaseballScoreboardComponent
       hideBases={`${state.displaySettings.hideBases}`}
-      hideCounts={`${state.displaySettings.hideBases}`}
+      hideCounts={`${state.displaySettings.hideCounts}`}
       homeScore={scoreboard.score[0]}
       balls={scoreboard.balls}
       strikes={scoreboard.strikes}
