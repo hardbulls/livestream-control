@@ -14,7 +14,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@hardbulls/baseball-scoreboard": "^0.0.1",
+    "@hardbulls/baseball-scoreboard": "^1.0.4",
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.3",
     "@types/node": "^16.18.14",
