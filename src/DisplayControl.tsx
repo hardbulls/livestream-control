@@ -8,6 +8,7 @@ import Grid2 from "@mui/material/Unstable_Grid2";
 import { FormControl, FormControlLabel, InputLabel, MenuItem, Select, Switch } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { DisplaySettingsState } from "./baseball/model/DisplaySettingsState.ts";
+import { LeagueLogoUpload } from "./baseball/LeagueLogoUpload";
 
 interface Props {
   displaySettings: DisplaySettingsState
@@ -175,6 +176,22 @@ export const DisplayControl = ({ handleChange, displaySettings}: Props) => {
             onChange={(gradient) => handleChange("backgroundGradient", gradient)}
           />
         </Grid2>
+      </Grid2>
+
+      <Grid2 container spacing={2}>
+        <Grid2 xs={6}>
+          <ColorPicker
+            label={"League Logo Shadow"}
+            color={displaySettings.leagueLogoShadow}
+            onChange={(color) => handleChange("leagueLogoShadow", color)} />
+        </Grid2>
+        <Grid2 xs={6}>
+          <LeagueLogoUpload
+            handleFileUpload={(file) => handleChange("leagueLogo", file)}
+            handleReset={() => handleChange("leagueLogo", undefined)}
+          />
+        </Grid2>
+
       </Grid2>
     </div>
   );

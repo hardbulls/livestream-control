@@ -27,6 +27,8 @@ export const DEFAULT_STATE: State = {
         filterColor: "#00ff00",
         hideBases: false,
         hideCounts: false,
+        leagueLogo: undefined,
+        leagueLogoShadow: "#c9c9c9",
         homeGradient: {
             angle: 180,
             startPercentage: 50,
