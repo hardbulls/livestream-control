@@ -29,38 +29,44 @@ export const Scoreboard = ({ state, scoreboard }: Props) => {
   const toGradientValue = (gradient: Gradient) => {
     return `${gradient.angle},${gradient.startColor},${gradient.endColor},${gradient.startPercentage},${gradient.endPercentage}`
   }
+  const modes: Array<"foreground" | "background"> = ["foreground", "background"]
 
-  return (
-    <BaseballScoreboardComponent
-      hideBases={`${state.displaySettings.hideBases}`}
-      hideCounts={`${state.displaySettings.hideCounts}`}
-      leagueLogoShadow={`${state.displaySettings.leagueLogoShadow}`}
-      leagueLogoSrc={state.displaySettings.leagueLogo && `${state.displaySettings.leagueLogo?.data}`}
-      homeScore={scoreboard.score[0]}
-      balls={scoreboard.balls}
-      strikes={scoreboard.strikes}
-      outs={scoreboard.outs}
-      awayScore={scoreboard.score[1]}
-      inning={inning}
-      bases={bases}
-      awayGradient={toGradientValue(state.displaySettings.awayGradient)}
-      homeGradient={toGradientValue(state.displaySettings.homeGradient)}
-      layoutGradient={toGradientValue(state.displaySettings.layoutGradient)}
-      backgroundGradient={toGradientValue(state.displaySettings.backgroundGradient)}
-      fontColorDark={state.displaySettings.fontColorDark}
-      fontColorLight={state.displaySettings.fontColorLight}
-      awayLogoSrc={state.awayLogo?.data}
-      homeLogoSrc={state.homeLogo?.data}
-      awayLogoShadow={state.displaySettings.awayLogoShadow}
-      homeLogoShadow={state.displaySettings.homeLogoShadow}
-      activeInningColor={state.displaySettings.activeInningColor}
-      inactiveInningColor={state.displaySettings.inactiveInningColor}
-      activeBaseColor={state.displaySettings.activeBaseColor}
-      inactiveBaseColor={state.displaySettings.inactiveBaseColor}
-      awayName={state.away}
-      homeName={state.home}
-      fontName={state.displaySettings.font?.name}
-      fontLineHeight={state.displaySettings.fontLineHeight}
-    />
-  );
+  return modes.map((mode) => {
+    return (
+      <div style={{marginBottom: '20px'}}>
+        <BaseballScoreboardComponent
+          mode={mode}
+          hideBases={`${state.displaySettings.hideBases}`}
+          hideCounts={`${state.displaySettings.hideCounts}`}
+          leagueLogoShadow={`${state.displaySettings.leagueLogoShadow}`}
+          leagueLogoSrc={state.displaySettings.leagueLogo && `${state.displaySettings.leagueLogo?.data}`}
+          homeScore={scoreboard.score[0]}
+          balls={scoreboard.balls}
+          strikes={scoreboard.strikes}
+          outs={scoreboard.outs}
+          awayScore={scoreboard.score[1]}
+          inning={inning}
+          bases={bases}
+          awayGradient={toGradientValue(state.displaySettings.awayGradient)}
+          homeGradient={toGradientValue(state.displaySettings.homeGradient)}
+          layoutGradient={toGradientValue(state.displaySettings.layoutGradient)}
+          backgroundGradient={toGradientValue(state.displaySettings.backgroundGradient)}
+          fontColorDark={state.displaySettings.fontColorDark}
+          fontColorLight={state.displaySettings.fontColorLight}
+          awayLogoSrc={state.awayLogo?.data}
+          homeLogoSrc={state.homeLogo?.data}
+          awayLogoShadow={state.displaySettings.awayLogoShadow}
+          homeLogoShadow={state.displaySettings.homeLogoShadow}
+          activeInningColor={state.displaySettings.activeInningColor}
+          inactiveInningColor={state.displaySettings.inactiveInningColor}
+          activeBaseColor={state.displaySettings.activeBaseColor}
+          inactiveBaseColor={state.displaySettings.inactiveBaseColor}
+          awayName={state.away}
+          homeName={state.home}
+          fontName={state.displaySettings.font?.name}
+          fontLineHeight={state.displaySettings.fontLineHeight}
+        />
+      </div>
+    )
+  });
 };
